@@ -4,11 +4,11 @@
 
 At a high level, this week is about building an effective process for learning unfamiliar language features and patterns.  In this workshop, you'll practice using this process to understand some code that uses the constructor and prototype pattern.
 
-You'll also write some code that uses this pattern to encapsulate some behaviour.
+You'll also write some code that uses this pattern to encapsulate behaviour.
 
 ### Getting visibility
 
-A great way to understand code is to first tighten the loop, then get visibility.  In this workshop, we'll practice getting visibility.  As you go through the workshop, try using `console.log()` to inspect the values of:
+A great way to understand code is to first tighten the loop, then get visibility.  In this workshop, we'll practice getting visibility.  As you go through the workshop, use `console.log()` to inspect the values of:
 
 * Variables
 * Parameters
@@ -34,10 +34,12 @@ A great way to understand code is to first tighten the loop, then get visibility
 
 ### Encapsulate some behaviour with the constructor and prototype pattern (20 mins)
 
-Use the constructor and prototype pattern to implement the user stories below.  You can draw on the OO skills you learnt in the first four weeks of the course.  Don't be afraid to diagram! Strive for good encapsulation.
+Use the constructor and prototype pattern to implement the user stories (below).  You can draw on the OO skills you learnt in the first four weeks of the course.  Don't be afraid to diagram! Strive for good encapsulation.
+
 ### Plenary (20 mins)
 
-#### User Stories
+We'll come back together for a short plenary.  We'll show our code and discuss it.  We'll discuss the strengths and weaknesses of the constructor and prototype pattern for encapsulating behaviour.
+
 ## Questions
 
 ### Question 1
@@ -167,6 +169,7 @@ console.log("count is", countModel.count());
 // console.log(countModel["???"] === CountModel.prototype);
 ```
 
+## User Stories
 
 ```
 As a shepherd
