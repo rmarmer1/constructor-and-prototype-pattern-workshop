@@ -22,7 +22,7 @@ See the [student readme](README.md) for instructions.
 
 See the [student readme](README.md) for instructions.
 
-### Plenary (15 minutes)
+### Plenary (20 minutes)
 
 Collaboratively review students' implementation of the user stories.
 

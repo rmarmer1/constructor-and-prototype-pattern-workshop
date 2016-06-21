@@ -35,6 +35,7 @@ A great way to understand code is to first tighten the loop, then get visibility
 ### Encapsulate some behaviour with the constructor and prototype pattern (20 mins)
 
 Use the constructor and prototype pattern to implement the user stories below.  You can draw on the OO skills you learnt in the first four weeks of the course.  Don't be afraid to diagram! Strive for good encapsulation.
+### Plenary (20 mins)
 
 #### User Stories
 ## Questions
