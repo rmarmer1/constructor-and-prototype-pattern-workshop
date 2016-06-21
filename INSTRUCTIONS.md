@@ -10,9 +10,9 @@
 
 * Talk about the high level goal of the week (see the [student README](README.md)).
 
-* Show the [CountModel](index.js) constructor and prototype.  Run the code and explain at a high level how it works.
+* Show the CountModel code.  [Easy to read version without workshop-related comments](https://github.com/maryrosecook/count/blob/master/public/js/countModel.js)  Run the code and explain at a high level how it works.
 
-* Demonstrate getting visibility to answer a couple of the questions in comments in the code sample.
+* Demonstrate getting visibility to answer a couple of the questions in the [student README](README.md).
 
 ### Main: investigate pattern (20 minutes)
 

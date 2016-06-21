@@ -20,15 +20,152 @@ A great way to understand code is to first tighten the loop, then get visibility
 
 * Clone this repo.
 
-* Open the `index.html` file in your web browser.  Open the browser console.  You should see `count is 0`.
+* Open the `index.html` file in your web browser.  Open the browser console.  You should see `hello!`.
 
-* Open `index.js` in your text editor.  Play around with the code using the techniques for getting visibility. Answer the questions that are in comments.  Discuss your answers with your pair partner.
+* Open `index.js` in your text editor.
+
+* Paste the code for question 1 (below) into `index.js`.
+
+* Play around with the code using the techniques for getting visibility. Answer the questions that are in comments.
+
+* Discuss your answers with your pair partner.
+
+* Swap driver and navigator.  Continue with the next question.
 
 ### Encapsulate some behaviour with the constructor and prototype pattern (20 mins)
 
 Use the constructor and prototype pattern to implement the user stories below.  You can draw on the OO skills you learnt in the first four weeks of the course.  Don't be afraid to diagram! Strive for good encapsulation.
 
 #### User Stories
+## Questions
+
+### Question 1
+
+```js
+// What happens if you rename CountModel to countmodel? What ramifications does this have?
+
+function CountModel() {
+  this._count = 0;
+};
+
+CountModel.prototype = {
+  set: function(count) {
+    this._count = count;
+  }
+};
+
+var countModel = new CountModel();
+countModel.set(5);
+console.log("count is", countModel.count());
+```
+
+### Question 2
+
+```js
+function CountModel() {
+  this._count = 0;
+};
+
+CountModel.prototype = {
+  // What happens if you rename `set` to `_set` (and change
+  // `countModel.set(5)` below to `countModel._set(5)`)?
+  set: function(count) {
+    this._count = count;
+  }
+};
+
+var countModel = new CountModel();
+countModel.set(5);
+console.log("count is", countModel.count());
+```
+
+### Question 3
+
+```js
+function CountModel() {
+  this._count = 0;
+
+  // What happens if you assign `this` to a different value?
+
+  // What happens if you add `return {}` on this line. Why?
+};
+
+CountModel.prototype = {
+  set: function(count) {
+    this._count = count;
+  }
+};
+
+var countModel = new CountModel();
+countModel.set(5);
+console.log("count is", countModel.count());
+```
+
+### Question 4
+
+```js
+function CountModel() {
+  this._count = 0;
+};
+
+CountModel.prototype = {
+  set: function(count) {
+    this._count = count;
+  }
+};
+
+// What happens if you omit the `new` keyword in the next line?
+var countModel = new CountModel();
+countModel.set(5);
+console.log("count is", countModel.count());
+```
+
+### Question 5
+
+```js
+function CountModel() {
+  this._count = 0;
+};
+
+CountModel.prototype = {
+  set: function(count) {
+    this._count = count;
+  }
+};
+
+var countModel = new CountModel();
+countModel.set(5);
+
+// What happens if you add this code? Why?
+// countModel.set = function() {
+//   return "hello";
+// };
+
+console.log("count is", countModel.count());
+```
+
+### Question 6
+
+```js
+function CountModel() {
+  this._count = 0;
+};
+
+CountModel.prototype = {
+  set: function(count) {
+    this._count = count;
+  }
+};
+
+var countModel = new CountModel();
+countModel.set(5);
+console.log("count is", countModel.count());
+
+// Bonus research project. Can you find the property name below that
+// makes the statement log `true`?
+// console.log(countModel["???"] === CountModel.prototype);
+```
+
 
 ```
 As a shepherd
