@@ -20,7 +20,11 @@ A great way to understand code is to first tighten the loop, then get visibility
 
 * Clone this repo.
 
-* Open the `index.html` file in your web browser.  Open the browser console.  You should see `hello!`.
+* Open the `index.html` file in your web browser.
+
+* Open the browser console.
+
+* You should see `hello!`.
 
 * Open `index.js` in your text editor.
 
@@ -45,13 +49,17 @@ We'll come back together for a short plenary.  We'll show our code and discuss i
 ### Question 1
 
 ```js
-// What happens if you rename CountModel to countmodel? What ramifications does this have?
+// What happens if you rename CountModel to countmodel? Does this have any ramifications?
 
 function CountModel() {
   this._count = 0;
 };
 
 CountModel.prototype = {
+  count: function() {
+    return this._count;
+  },
+
   set: function(count) {
     this._count = count;
   }
@@ -70,6 +78,10 @@ function CountModel() {
 };
 
 CountModel.prototype = {
+  count: function() {
+    return this._count;
+  },
+
   // What happens if you rename `set` to `_set` (and change
   // `countModel.set(5)` below to `countModel._set(5)`)?
   set: function(count) {
@@ -88,12 +100,14 @@ console.log("count is", countModel.count());
 function CountModel() {
   this._count = 0;
 
-  // What happens if you assign `this` to a different value?
-
   // What happens if you add `return {}` on this line. Why?
 };
 
 CountModel.prototype = {
+  count: function() {
+    return this._count;
+  },
+
   set: function(count) {
     this._count = count;
   }
@@ -112,12 +126,16 @@ function CountModel() {
 };
 
 CountModel.prototype = {
+  count: function() {
+    return this._count;
+  },
+
   set: function(count) {
     this._count = count;
   }
 };
 
-// What happens if you omit the `new` keyword in the next line?
+// What happens if you omit the `new` keyword in the next line? Why?
 var countModel = new CountModel();
 countModel.set(5);
 console.log("count is", countModel.count());
@@ -131,18 +149,23 @@ function CountModel() {
 };
 
 CountModel.prototype = {
+  count: function() {
+    return this._count;
+  },
+
   set: function(count) {
     this._count = count;
   }
 };
 
 var countModel = new CountModel();
-countModel.set(5);
 
 // What happens if you add this code? Why?
 // countModel.set = function() {
 //   return "hello";
 // };
+
+countModel.set(5);
 
 console.log("count is", countModel.count());
 ```
@@ -155,6 +178,10 @@ function CountModel() {
 };
 
 CountModel.prototype = {
+  count: function() {
+    return this._count;
+  },
+
   set: function(count) {
     this._count = count;
   }
